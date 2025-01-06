@@ -1,70 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>タロット占い</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-            color: #ffffff;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .card {
-            width: 200px;
-            height: 300px;
-            background: url('card-back.jpg') no-repeat center;
-            background-size: cover;
-            margin: 20px auto;
-            transition: transform 0.6s ease, opacity 0.5s ease;
-            opacity: 1;
-        }
-        .card.flipped {
-            transform: rotateY(180deg) scale(1.1);
-            opacity: 0;
-        }
-        button {
-            padding: 15px 30px;
-            font-size: 1.5rem;
-            color: #ffffff;
-            background-color: #ff6f61;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #ff3b3b;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ゲッターズ高畑の占い館</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>タロット占い</h1>
-    <div class="card" id="tarotCard"></div>
-    <button onclick="drawCard()">1枚引く</button>
-
-    <script>
-        function drawCard() {
-            const card = document.getElementById('tarotCard');
-            card.classList.add('flipped');
-            setTimeout(() => {
-                const results = ["result1.html", "result2.html", "result3.html"];
-                const randomIndex = Math.floor(Math.random() * results.length);
-                window.location.href = results[randomIndex];
-            }, 1000); // アニメーション後に遷移
-        }
-    </script>
+  <header>
+    <div class="menu">
+      <span class="menu-icon">☰</span>
+      <nav class="menu-list">
+        <a href="index.html">占い</a>
+        <a href="shop.html">商品販売</a>
+        <a href="profile.html">プロフィール</a>
+      </nav>
+    </div>
+    <h1>ゲッターズ高畑の占い館</h1>
+    <p class="message"><strong>悩めるあなたにゲッターズ高畑からのメッセージを送ります・・・</strong></p>
+  </header>
+  <main>
+    <div class="card-draw">
+      <img src="img/tarot_ura.png" alt="タロットカード" class="tarot-back">
+        <p></p>
+      <button id="draw-button">一枚引く</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
