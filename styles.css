@@ -1,176 +1,180 @@
+/* 全体の基本設定 */
 body {
-  font-family: 'Times New Roman', serif;
-  background: radial-gradient(circle, #2b002b, #14012d);
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background: radial-gradient(rgb(0, 0, 0), rgb(102, 96, 145))
+  font-family: 'Times New Roman', serif; /* フォントを設定 */
+  background: radial-gradient(circle, #2b002b, #14012d); /* 背景にラジアルグラデーション */
+  color: #fff; /* 文字色を白に設定 */
+  margin: 0; /* ページのマージンを削除 */
+  padding: 0; /* ページのパディングを削除 */
+  text-align: center; /* テキストを中央に配置 */
 }
 
+/* ヘッダーの設定 */
 header {
-  position: relative;
-  padding: 20px;
+  position: relative; /* ヘッダーを相対的に配置 */
+  padding: 20px; /* ヘッダー内に余白を設定 */
 }
 
-/* ハンバーガーメニュー全体のスタイル */
+/* ハンバーガーメニューの設定 */
 .menu {
-  position: absolute;
-  top: 10px; /* 画面上からの位置 */
-  right: 10px; /* 画面右からの位置 */
-  z-index: 1000;
+  position: absolute; /* メニューを絶対配置 */
+  top: 10px; /* 画面上から10pxの位置に配置 */
+  right: 10px; /* 画面右から10pxの位置に配置 */
+  z-index: 1000; /* 他の要素より前面に表示 */
 }
 
 /* ハンバーガーアイコンのスタイル */
 .menu-icon {
-  font-size: 50px;
-  cursor: pointer;
-  color: white;
-  background-color: #212645;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.2s;
+  font-size: 50px; /* アイコンの大きさを設定 */
+  cursor: pointer; /* アイコンをクリック可能に */
+  color: white; /* アイコンの色を白に設定 */
+  background-color: #212645; /* アイコンの背景色を設定 */
+  padding: 10px; /* アイコン内の余白を設定 */
+  border-radius: 5px; /* アイコンの角を丸く設定 */
+  transition: background-color 0.2s; /* ホバー時に背景色が変わるアニメーション */
 }
 
+/* アイコンをホバーしたときの色変更 */
 .menu-icon:hover {
-  background-color: #baa8e7;
+  background-color: #baa8e7; /* ホバー時の背景色 */
 }
 
 /* メニューリストのスタイル */
 .menu-list {
-  display: flex;
-  flex-direction: column; /* 縦方向に並べる */
-  position: absolute;
-  top: 75px; /* ハンバーガーアイコンの下に表示 */
-  right: 10px; /* 画面右端に揃える */
+  display: flex; /* リストを横並びにする */
+  flex-direction: column; /* リスト項目を縦に並べる */
+  position: absolute; /* メニューを絶対配置 */
+  top: 75px; /* アイコンの下に表示 */
+  right: 10px; /* 画面右端に配置 */
   width: auto; /* メニューの幅を自動調整 */
-  background-color: #212645; /* 背景色 */
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 影をつける */
+  background-color: #212645; /* メニューの背景色 */
+  padding: 10px; /* メニュー内の余白を設定 */
+  border-radius: 5px; /* メニューの角を丸く設定 */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* メニューに影をつける */
   visibility: hidden; /* 初期状態では非表示 */
   opacity: 0; /* 初期状態では透明 */
-  transition: visibility 0.2s, opacity 0.2s;
+  transition: visibility 0.2s, opacity 0.2s; /* 表示時のアニメーション */
 }
 
 /* メニューリストのリンクのスタイル */
 .menu-list a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin: 5px 0; /* 各リンクの間に適切な余白 */
-  white-space: nowrap; /* テキストを折り返さない */
-  font-size: 20px;
+  color: white; /* リンク文字色を白に設定 */
+  text-decoration: none; /* リンクの下線を削除 */
+  padding: 5px 10px; /* リンク内の余白を設定 */
+  border-radius: 5px; /* リンクの角を丸く設定 */
+  margin: 5px 0; /* 各リンク間の余白を設定 */
+  white-space: nowrap; /* テキストの折り返しを防ぐ */
+  font-size: 20px; /* リンク文字のサイズを設定 */
 }
 
+/* リンクをホバーしたときの色変更 */
 .menu-list a:hover {
   background-color: #baa8e7; /* ホバー時の背景色 */
 }
 
-/* メニューをアクティブにしたときの表示設定 */
+/* メニューをアクティブにしたときに表示する設定 */
 .menu.active .menu-list {
   visibility: visible; /* メニューを表示 */
-  opacity: 1; /* 不透明にする */
+  opacity: 1; /* メニューを不透明に */
 }
 
+/* 見出し (h1) のスタイル */
 h1 {
-  font-size: 2.5em;
-  margin-top: 50px;
-  color: rgb(240, 232, 221);
-  background: #212645;
-  border: none;
-  border-radius: 5px;
-  width: 700px;
-  margin: 40px auto;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 2.5em; /* 見出し文字のサイズを設定 */
+  margin-top: 50px; /* 上部に余白を設定 */
+  color: rgb(240, 232, 221); /* 文字色を指定 */
+  background: #212645; /* 背景色を設定 */
+  border: none; /* 枠線を削除 */
+  border-radius: 5px; /* 角を丸く設定 */
+  width: 700px; /* 幅を700pxに設定 */
+  margin: 40px auto; /* 上下に40pxの余白、左右は自動で中央配置 */
+  padding: 30px; /* 内側に30pxの余白 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 影を追加 */
 }
 
-.card-container,
-.products,
-.profile {
-  margin: 50px auto;
-}
-
+/* ボタンのスタイル */
 button {
-  padding: 10px 20px;
-  font-size: 18px;
-  color: #fff;
-  background: #0c052a;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  padding: 10px 20px; /* 内側に余白を設定 */
+  font-size: 18px; /* フォントサイズを設定 */
+  color: #fff; /* 文字色を白に設定 */
+  background: #0c052a; /* 背景色を設定 */
+  border: none; /* 枠線を削除 */
+  border-radius: 5px; /* 角を丸く設定 */
+  cursor: pointer; /* クリック可能に設定 */
+  transition: background 0.3s; /* 背景色変更のアニメーション */
+  margin-bottom: 10px; /* 下部に余白を設定 */
+  margin-top: 10px; /* 上部に余白を設定 */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 影をつける */
 }
 
+/* ボタンをホバーしたときの背景色変更 */
 button:hover {
-  background: #5111b9;
+  background: #5111b9; /* ホバー時の背景色 */
 }
 
+/* メインコンテンツのスタイル */
 main {
-  width: 600px;
-  margin: 20px auto;
-  padding: 40px 80px;
-  border: 1px solid #1a1e34;
-  background-color: #212645;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 600px; /* 幅を600pxに設定 */
+  margin: 20px auto; /* 上下に20px、左右は自動で中央配置 */
+  padding: 40px 80px; /* 内側に40px上下、80px左右の余白を設定 */
+  border: 1px solid #1a1e34; /* 枠線を設定 */
+  background-color: #212645; /* 背景色を設定 */
+  border-radius: 5px; /* 角を丸く設定 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 影を追加 */
 }
 
+/* プロフィールボックスのスタイル */
 .prof-box {
-  background-color: #1a1e34;
-  color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1em;
-  margin-bottom: 2em;
+  background-color: #1a1e34; /* 背景色を設定 */
+  color: #ffffff; /* 文字色を白に設定 */
+  border: 1px solid #ccc; /* 枠線を設定 */
+  border-radius: 8px; /* 角を丸く設定 */
+  padding: 1em; /* 内側に余白を設定 */
+  margin-bottom: 2em; /* 下部に余白を設定 */
 }
 
 .prof-box ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; /* リストのスタイルをなしに */
+  padding: 0; /* パディングを削除 */
 }
 
 .prof-box li {
-  margin-bottom: 0.5em;
-  padding: 0.5em;
-  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.5em; /* 各項目の間に余白を設定 */
+  padding: 0.5em; /* 内側に余白を設定 */
+  border-bottom: 1px solid #ccc; /* 下に枠線を追加 */
 }
 
 .prof-box li:last-child {
-  border-bottom: none;
+  border-bottom: none; /* 最後の項目には枠線を引かない */
 }
 
 .prof-box li::before {
-  content: "•";
-  color: #eeefdd;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+  content: "•"; /* 項目の前にドットを追加 */
+  color: #eeefdd; /* ドットの色を設定 */
+  font-weight: bold; /* 太字に設定 */
+  display: inline-block; /* インラインブロックとして表示 */
+  width: 1em; /* 幅を設定 */
+  margin-left: -1em; /* 左に1emの余白を追加 */
 }
 
+/* 商品ボックスのスタイル */
 .product {
-  background-color: #1a1e34;
-  color: #ffffff;
-  border: 1px solid #4b4b5f;
-  border-radius: 8px;
-  padding: 1em;
-  margin-bottom: 2em;
+  background-color: #1a1e34; /* 背景色を設定 */
+  color: #ffffff; /* 文字色を白に設定 */
+  border: 1px solid #4b4b5f; /* 枠線を設定 */
+  border-radius: 8px; /* 角を丸く設定 */
+  padding: 1em; /* 内側に余白を設定 */
+  margin-bottom: 2em; /* 下部に余白を設定 */
 }
 
+/* 結果情報ボックスのスタイル */
 .result-info {
-  background-color: #1a1e34;
-  color: #ffffff;
-  border: 1px solid #4b4b5f;
-  border-radius: 8px;
-  padding: 1em;
-  margin-bottom: 2em;
-  margin-top: 2em;
+  background-color: #1a1e34; /* 背景色を設定 */
+  color: #ffffff; /* 文字色を白に設定 */
+  border: 1px solid #4b4b5f; /* 枠線を設定 */
+  border-radius: 8px; /* 角を丸く設定 */
+  padding: 1em; /* 内側に余白を設定 */
+  margin-bottom: 2em; /* 下部に余白を設定 */
+  margin-top: 2em; /* 上部に余白を設定 */
 }
 
 /* 下線を引くスタイル */
@@ -180,11 +184,11 @@ main {
   padding-bottom: 2px; /* 文字と下線の間に隙間を作る */
 }
 
+/* メッセージのスタイル */
 .message {
-  font-size: 22px; /* 文字サイズを20pxに設定 */
-  font-weight: bold; /* 太字に設定 (必要であれば省略可) */
-  text-align: center; /* 中央揃え (必要に応じて追加) */
-  margin-top: 10px; /* 上下に余白を追加 (必要に応じて調整) */
-  color: #c8c8c8;
+  font-size: 22px; /* 文字サイズを22pxに設定 */
+  font-weight: bold; /* 太字に設定 */
+  text-align: center; /* 中央揃え */
+  margin-top: 10px; /* 上部に余白を設定 */
+  color: #c8c8c8; /* 文字色を薄い灰色に設定 */
 }
-
